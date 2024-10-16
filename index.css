@@ -171,3 +171,92 @@ body{
     float: left;
     vertical-align: top;
 }
+
+/* seccion productos */
+
+#productos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.card{
+    position: relative;
+    
+}
+
+.card-img{
+    filter: grayscale(0);
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    height: 350px;
+    object-fit: cover;
+    filter: grayscale(0);
+    transition: filter 0.5s ease-in-out;
+}
+
+.card:hover .card-img{
+    filter: grayscale(1);
+}
+
+.card-info{
+    position: absolute;
+    top: 30%;    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #40f2a249;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    backdrop-filter: blur(18px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.288);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.288);
+    filter: opacity(0);
+    transition: filter 0.4s ease-in-out;
+}
+
+.card-info:hover{
+    filter: opacity(1);
+}
+
+.card-info h3{
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.card-info p{
+    font-weight: 300;
+}
+
+.card-info button{
+    background-color: #40F2A2;
+    border: 0;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card-info a{
+    text-decoration: none;
+    padding: 8px 25px;
+    display: inline-block;
+    border-radius: 15px;
+    transition: color 0.3s ease;
+}
+
+.card-info button a:hover{
+    background-color: crimson;
+    color: aliceblue;
+    box-shadow: 0 8px 10px black;
+}
+
