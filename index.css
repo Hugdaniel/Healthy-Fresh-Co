@@ -21,9 +21,9 @@ body{
 
 #inicio{
     width: 100%;
+    /* min-width: 420px; */
     height: 95px;
     display: flex;
-    flex-wrap: wrap;
     
     justify-content: space-between;
     align-items: center;
@@ -347,6 +347,41 @@ legend {
     margin-bottom: 15px;
 }
 
+/* seccion responsive */
+
+@media (width<=750px){
+    #inicio{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu{
+        text-align: center;
+    }
+
+    .nav{
+        justify-content: center;
+    }
+    .hero-text{
+        max-width: 75%;
+        top: 38px;
+    }
+
+    .hero-text h2{
+        font-size: 1.1em;
+    }
+
+    #productos{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }
+
+    .form{
+        max-width: 60%;
+    }
+}
 
 
 
